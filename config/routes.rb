@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get  'login' => 'woots#login'
+  post 'login' => 'woots#login_user'
+
+  get 'register' => 'woots#register'
+  post 'register' => 'woots#create'
+
+  get 'dashboard' => 'woots#dashboard'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
