@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
   validates :name, presence: true, length: { in: 2..20 }
   validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: EMAIL_REGEX }
   validates :password, presence: true, length: { in: 2..20 }
-  validates :confirm_password, presence: true, length: { in: 2..20 }
+  validates :password_confirmation, presence: true, length: { in: 2..20 }
 
 end
