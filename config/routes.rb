@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get  'login' => 'woots#login'
+  get  '' => 'woots#login'
   post 'login' => 'woots#login_user'
 
   get 'register' => 'woots#register'

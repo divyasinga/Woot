@@ -1,6 +1,6 @@
 
 <h1>login</h1>
-<form action ="/login" method ="post">
+<!-- <form action ="/login" method ="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="text" name="name" value="" placeholder="Email">
   <br>
@@ -11,6 +11,21 @@
   <button type="submit">Login</button>
   <br>
   <br>
-</form>
+</form> -->
+<div class="container">
+<div class="jumbotron">
+  <form class="" action="/users/login" method="post">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
 
-<a href="/register">New User?</a>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="text">
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+
+    <button type="submit" name="button">Log In</button>
+  </form>
+
+  <a href="/register">New User?</a>
+</div>
+</div>
