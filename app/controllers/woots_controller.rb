@@ -1,10 +1,17 @@
 class WootsController < ApplicationController
+
+  # helper_method  :all_products
+
+  def all_products
+    @products=Product.all
+  end
+
   def login
   end
 
   def find_user
     @user = User.find_by_email params[:email]
-    puts "Divya"
+
     # render json: [@user.errors.messages]
 
     if @user && @user.authenticate(params[:password])
@@ -30,9 +37,10 @@ class WootsController < ApplicationController
 
   end
 
-  # def dashboard
-  #
-  # end
+  def dashboard
+    @products=Product.all
+  
+  end
 
   def register
   end

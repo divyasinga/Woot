@@ -21,9 +21,16 @@
   <div class="page-header" style="text-align: center">
     <div class="container">
       <h3><b>WOOT WOOT!!!!!</b></h3>
+        <ul>
+          <li>
+            <% all_categories.each do |category| %>
+            <a href=""><%=category.name %></a>
+            <% end %>
+          </li>
+         <ul>
     </div>
   </div>
-
+  
   <div class="container">
     <% if flash[:errors] %>
     <% flash[:errors].each do |error| %>

@@ -1,1 +1,8 @@
-dashboard page
+<div>
+
+<ul>
+  <% @products.each do |products| %>
+  <a href="#"><li><%= products.name %></li></a>
+  <% end %>
+</ul>
+</div>
